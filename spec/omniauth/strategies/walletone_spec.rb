@@ -30,6 +30,16 @@ describe OmniAuth::Strategies::WalletOne do
     end
   end
 
+  describe 'skip_info option' do
+    context 'when skip info option is enabled' do
+      it 'should not include raw_info in extras hash' do
+        @options = { :skip_info => true }
+        allow(subject).to receive(:raw_info).and_return({:foo => 'bar'})
+        expect(subject.extra[:raw_info]).to eq(nil)
+      end
+    end
+  end
+
   describe 'expires field is not set by default, then it' do
     it 'should be taken from session raw_info' do
       allow(OmniAuth::Strategies::OAuth2).to receive(:credentials_stack).and_return([{'token' => 'token', 'expires' => nil}])

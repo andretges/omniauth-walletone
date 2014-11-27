@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Andrey Sidorov"]
   spec.email         = ["vozdelaluz@gmail.com"]
   spec.summary       = %q{OmniAuth strategy for WalletOne}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/heretge/omniauth-walletone"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

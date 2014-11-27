@@ -50,6 +50,10 @@ module OmniAuth
         }
       end
 
+      extra do
+        skip_info? ? {} : { :raw_info => raw_info }
+      end
+
       def credentials
         creds = super
         creds['expires'] = raw_info['ExpireDate']
