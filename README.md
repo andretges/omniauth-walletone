@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-```
+```ruby
 provider :walletone, "API_KEY", "API_SECRET", scope: 'GetBalance.CurrencyId(643)', format: :json
 ```
 
